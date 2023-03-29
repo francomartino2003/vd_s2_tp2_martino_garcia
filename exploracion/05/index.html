@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astronautas</title>
+    <style>
+      #chart{
+        overflow-y:auto;
+      }
+      #chart svg{
+        max-width: initial;
+      }
+      #input {
+        width: 250px;
+      }
+      #selector {
+        display: flex;
+      }
+      #selector p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+      .legend-title {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h2>Astronauta mas joven y mayor por año</h2>
+    <h4>desde 2010 hasta 2019</h4>
+    <br>
+    <div id="chart"></div>
+
+    <div id="selector">
+      <p>Seleccione año:</p>
+      <input type="range" min="2010" max="2019" step="1" value="2010" id="input" />
+      <p id="value-input"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

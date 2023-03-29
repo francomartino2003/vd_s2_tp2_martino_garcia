@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Astronautas</title>
+    <style>
+      #chart{
+        overflow-y:auto;
+      }
+      #chart svg{
+        max-width: initial;
+      }
+      #input {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1><span class="usa">EEUU</span> vs <span class="rusia">RUSIA</span></h1>
+
+    <h3 style="margin: 0;">Astronautas enviados entre 2010 y 2019:</h3>
+  
+    <div id="chart"></div>
+
+    <p style="margin-bottom:5px; margin-top: 0px; ">Filtrar:</p>
+    <label class="myCheckbox"><input type="checkbox" id="Comandante" value="Comandante"> Comandantes</label>
+    
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

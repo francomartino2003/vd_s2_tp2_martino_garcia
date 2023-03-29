@@ -1,0 +1,103 @@
+
+#chart{
+    overflow-y:auto;
+    
+  }
+
+  
+#input {
+width: 250px;
+}
+
+#chart svg{
+max-width: initial;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Jost', sans-serif;
+    color: #4D4D4D;
+}
+
+h1{
+    margin-block-end:0;
+}
+h3{
+    margin-block-start: 0;
+}
+
+.rusia{
+    color: #E43D3F;
+}
+
+.usa{
+    color: #32458A;
+}
+
+text, P, label {
+    font-family: 'Jost', sans-serif;
+    color: #4D4D4D;
+}
+
+.cuadrado{
+    height: 15px;
+    width: 15px;
+    background-color: #ABABAB;
+}
+
+.legend{
+    max-width: 640px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 640px;
+    margin: auto;
+}
+
+.myCheckbox input:checked{
+    accent-color: #4D4D4D;
+  }
+
+.btn-rojo {
+    color: #E43D3F;
+    padding: 4px 12px;
+    text-decoration: none;
+    border: 3px solid #E43D3F;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}  
+
+.btn-rojo:hover {
+    color: #FFFFFF;
+    background-color: #E43D3F;
+}  
+
+.btn-azul {
+    color: #32458A;
+    padding: 4px 12px;
+    text-decoration: none;
+    border: 3px solid #32458A;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn-azul:hover {
+    color: #FFFFFF;
+    background-color: #32458A
+}
+
+p{
+    font-size: 12px;;
+}
+
+
