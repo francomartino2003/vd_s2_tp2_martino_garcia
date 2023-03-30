@@ -21,27 +21,22 @@
         Ut lobortis orci quis mauris varius mollis. Sed feugiat scelerisque neque sit amet tincidunt.
       </P>
       <h3>Dataviz 1:</h3>
-      <a  class= "btn-rojo" href="dataviz_1/index.html">Ver</a>
-      <br><br>
+      <button class="btn-rojo" onclick="abrirVentana('dataviz_1')">Ver</button>
+      
       <h3>Dataviz 2:</h3>
-      <a class="btn-azul" href="dataviz_2/index.html">Ver</a>
-      <br><br>
+      <button class="btn-azul" onclick="abrirVentana('dataviz_2')">Ver</button>
+      
       <h3>Dataviz 3:</h3>
-      <a class= "btn-rojo" href="dataviz_3/index.html">Ver</a>
-      <br><br>
+      <button class="btn-rojo" onclick="abrirVentana('dataviz_3')">Ver</button>
+      
       <h3>Dataviz 4:</h3>
-      <a class="btn-azul" href="dataviz_3/index.html">Ver</a>
+      <button class="btn-azul" onclick="abrirVentana('dataviz_3')">Ver</button>
 
       <br><br>
-
-      <button onclick="abrirVentana('dataviz_1')">Mi botón1</button>
-      <button onclick="abrirVentana('dataviz_2')">Mi botón2</button>
-      <button onclick="abrirVentana('dataviz_3')">Mi botón3</button>
 
       <div id="mi-ventana-emergente" class="ventana-emergente">
         <div class="contenido-ventana">
           <div id="contenido-html"></div>
-          <button onclick="cerrarVentana()">Cerrar ventana</button>
         </div>
       </div>
 
@@ -68,7 +63,6 @@
       border-radius: 5px;
       width: 80%;
       max-width: 640px;
-      text-align: center;
     }
     
     .ventana-emergente.mostrar {
@@ -81,10 +75,9 @@
 
 
 <script>
-
+  var ventanaEmergente = document.getElementById("mi-ventana-emergente");
   
   function abrirVentana(dataviz) {
-  var ventanaEmergente = document.getElementById("mi-ventana-emergente");
   ventanaEmergente.classList.add("mostrar");
 
   // Cargar contenido HTML del archivo "contenido.html"
@@ -107,6 +100,16 @@
   };
   xhr.send();
 }
+
+  window.addEventListener("click", function(event) {
+    var contenidoHtml = document.getElementById("contenido-html");
+    console.log("click");
+      if (event.target != ventanaEmergente || contenidoHtml.innerHTML == "") {
+        console.log("sape");
+        return;
+      }
+      cerrarVentana();
+    });
   
   function cerrarVentana() {
     var contenidoHtml = document.getElementById("contenido-html");
@@ -114,6 +117,8 @@
     var ventanaEmergente = document.getElementById("mi-ventana-emergente");
     ventanaEmergente.classList.remove("mostrar");
   }
+
+  
   </script>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>

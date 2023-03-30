@@ -35,30 +35,41 @@ function createChart(comandante) {
   let yUSA = 0;
   let xRUS = 0;
   let yRUS = 0;
+  let USAlen = 0;
+  let RUSlen = 0;
   for(let i = 0; i < dataFilter.length; i++){
     if(dataFilter[i]["nacionalidad"] == "EE.UU."){
       dataFilter[i]["x"] = xUSA;
       dataFilter[i]["y"] = yUSA;
+      dataFilter[i]["text"] = "";
       xUSA++;
       if(xUSA > 9){
         yUSA++;
         xUSA = 0;
       }
+      USAlen++;
     }
     if(dataFilter[i]["nacionalidad"] == "U.S.S.R/Rusia"){
       dataFilter[i]["x"] = xRUS + 10;
       dataFilter[i]["y"] = yRUS;
+      dataFilter[i]["text"] = "";
       xRUS++;
       if(xRUS > 9){
         yRUS++;
         xRUS = 0;
       }
+      RUSlen++;
     } 
   }
-  
+
+  let numeros = [];
+  numeros.push({"x":xUSA+USAlen*0.015-0.14, "y": yUSA, "num":USAlen, "nacionalidad": "EE.UU."});
+  numeros.push({"x":xRUS+10+RUSlen*0.015-0.14, "y": yRUS, "num":RUSlen, "nacionalidad": "U.S.S.R/Rusia"});
+  console.log(numeros);
+
   chart = Plot.plot({
     marginLeft: 15,
-    height : 290,
+    height : 320,
     color: {
       range: ["#32458A",  "#E43D3F"]
     },
@@ -73,6 +84,9 @@ function createChart(comandante) {
       label: "",
       ticks: 0,
     },
+    text:{
+      range: [1,10],
+    },
     marks: [
       Plot.dot(dataFilter, {
         x: 'x',
@@ -85,6 +99,14 @@ function createChart(comandante) {
           Status: ${d.status}
           Edad: ${d.edad_mision}
           Año mision: ${d.anio_mision}`,
+      }),
+      Plot.text(numeros, {
+        x: 'x',
+        y: 'y',
+        text: 'num',
+        fill: 'nacionalidad',
+        fontSize: (d) => (d.num*0.7+25),
+        dy: -8
       })
     ]
   })

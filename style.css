@@ -45,12 +45,21 @@ text, P, label {
 }
 
 .legend{
-    max-width: 640px;
+    max-width: 632px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    font-size: 12px;
+}
+
+.filtro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    float: right;
 }
 
 .container{
@@ -72,6 +81,7 @@ text, P, label {
     margin-bottom: 20px;
     border-radius: 0px;
     transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff;
 }  
 
 .btn-rojo:hover {
@@ -89,6 +99,8 @@ text, P, label {
     margin-bottom: 20px;
     border-radius: 0px;
     transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff;
+
 }
 
 .btn-azul:hover {
@@ -96,8 +108,13 @@ text, P, label {
     background-color: #32458A
 }
 
-p{
-    font-size: 12px;;
+.aclaracion{
+    max-width: 320px;
+    font-size: 10px;;
+}
+
+input{
+    margin: 0;
 }
 
 

@@ -57,7 +57,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         y: "tot_hs",
         text: (d) => ((d.nacionalidad == 'otros' && d.anio == 2014) ? "resto de paises (*)" : ""),
         dy: 14,
-        fontSize: 13,       
+        fontSize: 11,       
       })
     ]
   })

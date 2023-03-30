@@ -15,7 +15,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     nice: true,
     color:{
       type: "categorical",
-      range: ["rgba(50,69,138,1)", "rgba(228,61,63,0.9)"],
+      range: ["rgba(50,69,138,1)", "rgba(228,61,63,0.9)", "#ffffff"],
     },
     x:{
       label: "",
@@ -32,6 +32,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         r: ('horas_eva_totales'),
         fill: 'nacionalidad',
       }),
+      Plot.text(data, {
+        x: 'nacionalidad',
+        text: (d) => ((d.horas_eva_totales).toFixed(0)+' hs'),
+        fill: 3,
+        fontSize: (d) => ((d.horas_eva_totales)/12)
+      }),
+
     ]
   })
  
