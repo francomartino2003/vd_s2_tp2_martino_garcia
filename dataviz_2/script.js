@@ -65,7 +65,6 @@ function createChart(comandante) {
   let numeros = [];
   numeros.push({"x":xUSA+USAlen*0.015-0.14, "y": yUSA, "num":USAlen, "nacionalidad": "EE.UU."});
   numeros.push({"x":xRUS+10+RUSlen*0.015-0.14, "y": yRUS, "num":RUSlen, "nacionalidad": "U.S.S.R/Rusia"});
-  console.log(numeros);
 
   chart = Plot.plot({
     marginLeft: 15,
