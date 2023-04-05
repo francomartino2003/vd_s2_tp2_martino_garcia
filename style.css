@@ -16,14 +16,27 @@ max-width: initial;
 h1, h2, h3, h4, h5, h6{
     font-family: 'Jost', sans-serif;
     color: #4D4D4D;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.27em;
 }
 
 h1{
-    margin-block-end:0;
+    font-weight: 700;
 }
+
 h3{
-    margin-block-start: 0;
+    font-weight: 600;
 }
+
+h4{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 400;
+}
+
+
 
 .rusia{
     color: #E43D3F;
@@ -76,13 +89,14 @@ text, P, label {
     color: #E43D3F;
     padding: 4px 12px;
     text-decoration: none;
-    border: 3px solid #E43D3F;
+    border: 2.25px solid #E43D3F;
     font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
     border-radius: 0px;
     transition: background-color 0.5s ease, color 0.5s ease;
     background-color: #ffffff;
+    margin-top: 5px;
 }  
 
 .btn-rojo:hover {
@@ -94,10 +108,11 @@ text, P, label {
     color: #32458A;
     padding: 4px 12px;
     text-decoration: none;
-    border: 3px solid #32458A;
+    border: 2.25px solid #32458A;
     font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 10px;
     border-radius: 0px;
     transition: background-color 0.5s ease, color 0.5s ease;
     background-color: #ffffff;
@@ -145,5 +160,19 @@ input{
     justify-content: center;
     align-items: center;
   }
+
+.ajustar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}  
+
+.foto{
+    background-color: #ABABAB;
+    width: 100px;
+}
+
 
 

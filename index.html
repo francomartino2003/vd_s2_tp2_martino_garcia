@@ -18,23 +18,22 @@
       <h1><span class="usa">EEUU</span> vs <span class="rusia">RUSIA</span></h1>
       <h3>LA CONQUISTA ESPACIAL ENTRE 2010 Y 2019</h3>
       <P>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Aenean at arcu pellentesque, ultricies sem ut, hendrerit augue. 
-        Maecenas bibendum lobortis mauris id pellentesque. 
-        Ut lobortis orci quis mauris varius mollis. Sed feugiat scelerisque neque sit amet tincidunt.
+        La década de 2010 fue testigo de una feroz competencia entre Estados Unidos y Rusia en la conquista del espacio. 
+        Ambos países han estado enviando astronautas con el objetivo de mantener y 
+        expandir su presencia en el cosmos.
       </P>
-      <h3>Dataviz 1:</h3>
-      <button class="btn-rojo" onclick="abrirVentana('dataviz_1')">Ver</button>
-      
-      <h3>Dataviz 2:</h3>
-      <button class="btn-azul" onclick="abrirVentana('dataviz_2')">Ver</button>
-      
-      <h3>Dataviz 3:</h3>
-      <button class="btn-rojo" onclick="abrirVentana('dataviz_3')">Ver</button>
-      
-      <h3>Dataviz 4:</h3>
-      <button class="btn-azul" onclick="abrirVentana('dataviz_3')">Ver</button>
-
+        <ul>
+          <li><h4>¿Por qué EEUU vs Rusia?</h4> <button class="btn-rojo" onclick="abrirVentana('dataviz_1')">Ver</button></li>
+        
+          <li><h4>Astronautas y Comandante</h4>
+          <button class="btn-azul" onclick="abrirVentana('dataviz_2')">Ver</button></li>
+        
+          <li><h4>Por fuera de la nave</h4>
+          <button class="btn-rojo" onclick="abrirVentana('dataviz_3')">Ver</button></li>
+        
+          <li><h4>Mujeres en el espacio</h4>
+          <button class="btn-azul" onclick="abrirVentana('dataviz_4')">Ver</button></li> 
+        </ul>
       <br><br>
 
       <div id="mi-ventana-emergente" class="ventana-emergente">
@@ -86,6 +85,7 @@
     ventanaEmergente.classList.remove("mostrar");
   }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>

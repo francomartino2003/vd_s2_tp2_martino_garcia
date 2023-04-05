@@ -38,7 +38,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       tickFormat: d3.format("#.0f")
     },
     y:{
-      label: "Miles de Hs",
+      label: "Miles de horas",
     },
     marks: [
       Plot.line(dataFinal, {
